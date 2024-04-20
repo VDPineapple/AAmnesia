@@ -62,12 +62,12 @@ fn display(visited_locations: Vec<LocationRecord>, width: usize) {
         half_label_str, " ".repeat(spacing), max_label_str
     );
     println!("{}", top_label);
-    println!("{}-X-", " ".repeat(num_chars_x / 2 + 8));
+    println!("{}-Z-", " ".repeat(num_chars_x / 2 + 8));
 
     // Print board, and axes
     for i in 0..num_chars_y {
         if i == center_y {
-            println!("0    -Z- {}+{} +Z+", "-".repeat(num_chars_x / 2), "-".repeat(num_chars_x / 2));
+            println!("0    -X- {}+{} +X+", "-".repeat(num_chars_x / 2), "-".repeat(num_chars_x / 2));
             continue;
         }
         let mut row = String::new();
@@ -100,7 +100,7 @@ fn display(visited_locations: Vec<LocationRecord>, width: usize) {
 
         println!("{}", row);
     }
-    println!("{}+X+", " ".repeat(num_chars_x / 2 + 8));
+    println!("{}+Z+", " ".repeat(num_chars_x / 2 + 8));
 
 
 }
