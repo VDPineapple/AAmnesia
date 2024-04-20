@@ -62,7 +62,7 @@ fn display(visited_locations: Vec<LocationRecord>, width: usize) {
         half_label_str, " ".repeat(spacing), max_label_str
     );
     println!("{}", top_label);
-    println!("{}+X+", " ".repeat(num_chars_x / 2 + 8));
+    println!("{}-X-", " ".repeat(num_chars_x / 2 + 8));
 
     // Print board, and axes
     for i in 0..num_chars_y {
@@ -100,7 +100,7 @@ fn display(visited_locations: Vec<LocationRecord>, width: usize) {
 
         println!("{}", row);
     }
-    println!("{}-X-", " ".repeat(num_chars_x / 2 + 8));
+    println!("{}+X+", " ".repeat(num_chars_x / 2 + 8));
 
 
 }
