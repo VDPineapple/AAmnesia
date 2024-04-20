@@ -207,6 +207,8 @@ fn main() {
     let mut visited_locations = Vec::new();
     let mut previous_clipboard_content = String::new();
 
+    display(visited_locations.clone(), width);
+
     loop {
         // Read clipboard content
         let clipboard_content = match ClipboardContext::new() {
